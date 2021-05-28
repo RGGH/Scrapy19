@@ -46,8 +46,8 @@ class Jobz(scrapy.Spider):
         items = JobzItem()
         
         soup = BeautifulSoup(response.text, 'html.parser')
-        items['description'] = soup.get_text()[:150]
-        items['url'] = response.url[:180]
+        items['description'] = soup.get_text()
+        items['url'] = response.url[:188]
         items['posted'] = '2000-12-11'
         yield items
 
