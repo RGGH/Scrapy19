@@ -13,7 +13,7 @@ from bs4 import BeautifulSoup
 
 #import sys
 #sys.path.insert(0,'..')
-from items import JobzItem
+from ..items import JobzItem
 
 # class to scrape jooble and visit 3rd part links
 class Jobz(scrapy.Spider):			
