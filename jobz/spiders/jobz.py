@@ -18,7 +18,7 @@ from items import JobzItem
 # class to scrape jooble and visit 3rd part links
 class Jobz(scrapy.Spider):			
 
-    name = 'jobz' 
+    name = 'jobzspider' 
     start_urls = ['https://uk.jooble.org/SearchResult?date=8&loc=2&p=2&rgns=Remote&ukw=\
     python%20engineer']
     
