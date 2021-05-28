@@ -3,5 +3,6 @@
 ### Notes:
   - Run as 'scrapy crawl' not via crawler process, as pipelines don't work with crawler process
   - Make sure columns in Postgres have large enough varchar() for long urls
+  - written with Python 3.9.5
   
 
