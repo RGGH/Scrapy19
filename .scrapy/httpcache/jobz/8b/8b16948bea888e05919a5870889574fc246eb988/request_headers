@@ -1,0 +1,12 @@
+Sec-Fetch-User: ?1
+Accept-Language: en-GB,en-US;q=0.9,en;q=0.8
+Accept-Encoding: gzip,
+Sec-Fetch-Site: same-origin
+Accept: text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.9
+Upgrade-Insecure-Requests: 1
+Referer: https://www.jooble.org/
+Sec-Fetch-Mode: navigate
+Cache-Control: max-age=0
+User-Agent:  Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/87.0.4280.88 Safari/537.36
+Sec-Fetch-Dest: document
+Cookie: shistory=%5b%7b%22sid%22%3a-704854795602179392%2c%22ct%22%3a%222021-05-28T07%3a40%3a32.723559%22%2c%22qh%22%3a3796568432588042731%2c%22rs%22%3a%22Remote%22%2c%22ss%22%3a%22python+engineer%22%7d%5d; dt_groups=; ssearchstring=python+engineer; cregion=41621; uuid=-7455566892506153551; rk_groups=; sever=14; user_bucket=3; xtest_464_1=2; xtest_487_0=0; LastVisit=5/28/2021 7:40:45 AM; ver=mobile; ULang=0; .AspNetCore.Session=CfDJ8PKcpNLi+zxNiMETKomJlxHO43O1xvBMCiAbYKvOKDn6GtVC4ygpPSy18sE84schrp4UKma3VvKMEZn51fE5VLQz0mFSRpTeWtIY771osYaX05DZx+mCKknm/1CygMj/mC2oXlwK1KK//2eZeM8R14mJmDjAg5G/mZ1I/p/YEaEY; SessionCookie.uk=-5179722746124297886*-704854795602179392*637577844461772028; SessionUtmCookie.uk=

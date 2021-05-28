@@ -1,0 +1,7 @@
+Server: nginx
+Date: Fri, 28 May 2021 07:41:05 GMT
+Content-Type: text/html; charset=utf-8
+Set-Cookie: SessionCookie.uk=-5179722746124297886*-704854795602179392*637577844420870337; expires=Fri, 31 Dec 9999 21:59:59 GMT; domain=.jooble.org; path=/
+Set-Cookie: SessionUtmCookie.uk=; expires=Fri, 31 Dec 9999 21:59:59 GMT; domain=.jooble.org; path=/
+X-Upstream: 10.0.0.147:8050
+Content-Encoding: gzip

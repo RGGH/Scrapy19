@@ -1,0 +1,15 @@
+Server: nginx
+Date: Fri, 28 May 2021 07:41:45 GMT
+Content-Type: text/html; charset=utf-8
+X-Dns-Prefetch-Control: off
+X-Frame-Options: SAMEORIGIN
+Strict-Transport-Security: max-age=15552000; includeSubDomains
+X-Download-Options: noopen
+X-Content-Type-Options: nosniff
+X-Xss-Protection: 1; mode=block
+Set-Cookie: SessionCookie.uk=-5179722746124297886*-704854795602179392*637577844724170100; Domain=.jooble.org; Path=/; Expires=Fri, 31 Dec 9999 21:59:59 GMT
+Set-Cookie: SessionUtmCookie.uk=; Domain=.jooble.org; Path=/; Expires=Fri, 31 Dec 9999 21:59:59 GMT
+Set-Cookie: ver=mobile; Path=/
+Etag: W/"39d39-AoCaCv01uJ9PVyR9okeSdFclyNQ"
+X-Upstream: 10.0.0.161:4020
+Content-Encoding: gzip
