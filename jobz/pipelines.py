@@ -4,12 +4,16 @@
 
 import sys
 import psycopg2
+import datetime
+ 
+
 
 class JobzPipeline:
 
     def __init__(self):
         self.create_conn()
         self.create_table()
+        self.dt = datetime.date.today()
 
     def create_conn(self):
         # connect to Connect to DB
@@ -46,7 +50,7 @@ class JobzPipeline:
 
         url=item.get('url'),
         description=item.get('description'),
-        posted=item.get('posted')
+        posted= self.dt
         vals = (url,description,posted)
 
         # insert multiple rows of jobs data
