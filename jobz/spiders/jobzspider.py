@@ -12,8 +12,6 @@ from scrapy import Request
 from scrapy.crawler import CrawlerProcess 
 from scrapy.loader import ItemLoader
 
-#import sys
-#sys.path.insert(0,'..')
 from ..items import JobzItem
 
 # class to scrape jooble and visit 3rd part links
@@ -35,6 +33,7 @@ class Jobz(scrapy.Spider):
 
     def parse(self, response):
         
+        # links from main page
         links = response.xpath('//h2/a/@href').getall()
 
         for link in links:        
@@ -47,6 +46,7 @@ class Jobz(scrapy.Spider):
         # Use items and pipelines for SQL
         items = JobzItem()
         
+        # get all paragraph text as list, convert to string
         descriptions = response.xpath('*//p/text()').getall()
         description = ''.join(descriptions)
         description = description[:999]
