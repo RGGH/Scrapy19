@@ -4,12 +4,13 @@
 #+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+
 
 import os
+import datetime
+import re 
 
 import scrapy
 from scrapy import Request
 from scrapy.crawler import CrawlerProcess 
 from scrapy.loader import ItemLoader
-from bs4 import BeautifulSoup
 
 #import sys
 #sys.path.insert(0,'..')
@@ -19,7 +20,8 @@ from ..items import JobzItem
 class Jobz(scrapy.Spider):			
 
     name = 'jobzspider' 
-    start_urls = ['https://uk.jooble.org/SearchResult?date=8&loc=2&p=2&rgns=Remote&ukw=\
+    start_urls = [
+        'https://uk.jooble.org/SearchResult?date=8&loc=2&p=2&rgns=Remote&ukw=\
     python%20engineer']
     
     headers = {'sec-fetch-user': '?1', 'accept-language': 'en-GB,en-US;q=0.9,en;q=0.8', \
@@ -34,26 +36,22 @@ class Jobz(scrapy.Spider):
     def parse(self, response):
         
         links = response.xpath('//h2/a/@href').getall()
-        #print(links)
+
         for link in links:        
-            yield response.follow(url=link, headers=self.headers, callback=self.parse_detail)
+            yield response.follow(
+                url=link, headers=self.headers, callback=self.parse_detail)
             print(response.url)
 
     def parse_detail(self, response):
 
         # Use items and pipelines for SQL
-
         items = JobzItem()
         
-        soup = BeautifulSoup(response.text, 'html.parser')
-        items['description'] = soup.get_text()[:400]
+        descriptions = response.xpath('*//p/text()').getall()
+        description = ''.join(descriptions)
+        description = description[:999]
+
+        items['description'] = description
         items['url'] = response.url[:180]
-        items['posted'] = '2000-12-11'
+        items['posted'] = datetime.date.today()
         yield items
-
-
-# main driver
-#if __name__ =='__main__':
-#    process = CrawlerProcess()
-#    process.crawl(Jobz)
-#    process.start()
