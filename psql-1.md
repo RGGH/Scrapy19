@@ -1,6 +1,6 @@
 ![pi.png](pi.png)
 
-### Create bash script to activate env and run spider
+### Create bash script to activate virtual environment and run spider
  
     #!/usr/bin/env bash
 
