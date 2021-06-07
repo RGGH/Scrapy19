@@ -1,4 +1,5 @@
-[https://en.wikipedia.org/wiki/Raspberry_Pi]
+
+![https://en.wikipedia.org/wiki/Raspberry_Pi](pi.jpg)
 
 ### Create bash script to activate env and run spider
  
