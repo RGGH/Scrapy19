@@ -21,6 +21,18 @@
     WHERE posted < NOW() - interval '4 days';
     DELETE 10
     jobs=# 
+    
+#### check size of a column:
+
+    jobs=# select
+    sum(pg_column_size(posted)) as total_size,
+    avg(pg_column_size(posted)) as average_size,
+    sum(pg_column_size(posted)) * 100.0 / pg_relation_size('listings') as percentage
+    from listings;
+    total_size |    average_size    |       percentage       
+    ------------+--------------------+------------------------
+           136 | 4.0000000000000000 | 0.23716517857142857143
+
 
   
 
