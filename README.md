@@ -8,5 +8,19 @@
   - Keep search small, as the site has 'load more' (not AJAX/JSON) so will not work from scrapy
 
   - Clone Scrapy19, run in a virtualenv, use cj.sh (Cron Job Shell Script) via cron to run it daily
+
+#### code to age out old records:
+
+    jobs=# DELETE FROM listings
+    WHERE posted < NOW() - interval '7 days';
+    DELETE 0
+    jobs=# DELETE FROM listings
+    WHERE posted < NOW() - interval '5 days';
+    DELETE 0
+    jobs=# DELETE FROM listings
+    WHERE posted < NOW() - interval '4 days';
+    DELETE 10
+    jobs=# 
+
   
 
